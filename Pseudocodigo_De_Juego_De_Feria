@@ -1,0 +1,39 @@
+Algoritmo juego_de_feria
+	Definir encestes Como Entero
+    Definir puntaje Como Real
+    Definir opcion Como Caracter
+    Definir premio Como Caracter
+	
+    Escribir "Ingrese el número de encestes (0 a 8):"
+    Leer encestes
+	
+    Si encestes < 0 O encestes > 8 Entonces
+        Escribir "Número de encestes inválido. Debe estar entre 0 y 8."
+	
+Fin Si
+
+Si encestes < 3 Entonces
+	Escribir "No has encestado suficientes veces. No ganas premio."
+Sino
+	Si encestes >= 3 Y encestes <= 5 Entonces
+		premio = "Premio A"
+		Escribir "¡Felicidades! Ganaste el ", premio
+	Sino
+		Escribir "Has encestado ", encestes, " veces. ¿Quieres jugar a las canicas? (S/N)"
+		Leer opcion
+		
+		Si opcion = "S" O opcion = "s" Entonces
+			Escribir "Ingrese su puntaje en las canicas:"
+			Leer puntaje
+			
+			Si puntaje > 30 Entonces
+				Escribir "¡Felicidades! Ganaste $2000 en efectivo."
+			Sino
+				Escribir "¡Felicidades! Ganaste un balón."
+			Fin Si
+		Sino
+			Escribir "Has elegido no jugar a las canicas. No ganas premio adicional."
+		Fin Si
+	Fin Si
+Fin Si
+FinAlgoritmo
